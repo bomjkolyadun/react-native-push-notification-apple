@@ -13,15 +13,6 @@
 + (NSCalendarUnit)NSCalendarUnit:(id)json;
 @end
 
-/**
- * Type deprecated in iOS 10.0
- * TODO: This method will be removed in the next major version
- */
-@interface RCTConvert (UILocalNotification)
-+ (UILocalNotification *)UILocalNotification:(id)json;
-+ (NSDictionary *)RCTFormatLocalNotification:(UILocalNotification *)notification;
-@end
-
 @interface RCTConvert (UNNotificationRequest)
 + (UNNotificationRequest *)UNNotificationRequest:(id)json;
 + (NSDictionary *)RCTFormatUNNotificationRequest:(UNNotificationRequest *)request;
