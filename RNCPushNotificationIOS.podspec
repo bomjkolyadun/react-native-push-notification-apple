@@ -4,7 +4,7 @@ package = JSON.parse(File.read(File.join(File.dirname(__FILE__), "package.json")
 
 Pod::Spec.new do |s|
   # NPM package specification
-  
+
   s.name           = 'RNCPushNotificationIOS'
   s.version        = package['version']
   s.summary        = package['description']
@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
   s.license        = package['license']
   s.author         = package['author']
   s.homepage       = package['homepage']
-  
-  s.source       = { :git => "https://github.com/react-native-community/push-notification-ios", :tag => "v#{s.version}" }
-  s.source_files = "ios/*.{h,m}"
 
-  s.platform     = :ios, "10.0"
+  s.source         = { :git => "https://github.com/react-native-community/push-notification-ios", :tag => "v#{s.version}" }
+  s.source_files    = "ios/*.{h,m}"
+
+  s.platforms      = { :ios => "10.0", :osx => "10.14" }
 
   s.dependency "React-Core"
 
